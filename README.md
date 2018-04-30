@@ -26,3 +26,6 @@ A sample output could be:
 1 [2->5] 3
 ```
 Meaning that you should change the 2nd note from the second scale degree to the fifth.
+
+## TODO
+Add support for non diatonic melodies and chords.
