@@ -2,10 +2,10 @@
   <version>1.3</version>
   <meta>
     <artist/>
-    <title>autocorrect_melody</title>
+    <title>adele_melody_example</title>
     <beats_in_measure>4</beats_in_measure>
     <BPM>128</BPM>
-    <key>C</key>
+    <key>Bb</key>
     <YouTubeID/>
     <mode>1</mode>
     <band>
@@ -42,7 +42,7 @@
     <duration>15</duration>
     <active_start>0</active_start>
     <active_stop>0.27</active_stop>
-    <fingerprint>797888</fingerprint>
+    <fingerprint>956950</fingerprint>
   </meta>
   <data>
     <segment>
@@ -54,8 +54,17 @@
               <start_beat_abs>0</start_beat_abs>
               <start_measure>1</start_measure>
               <start_beat>1</start_beat>
-              <note_length>2</note_length>
-              <scale_degree>3</scale_degree>
+              <note_length>1.5</note_length>
+              <scale_degree>5</scale_degree>
+              <octave>0</octave>
+              <isRest>0</isRest>
+            </note>
+            <note>
+              <start_beat_abs>1.5</start_beat_abs>
+              <start_measure>1</start_measure>
+              <start_beat>2.5</start_beat>
+              <note_length>0.5</note_length>
+              <scale_degree>4</scale_degree>
               <octave>0</octave>
               <isRest>0</isRest>
             </note>
@@ -63,17 +72,35 @@
               <start_beat_abs>2</start_beat_abs>
               <start_measure>1</start_measure>
               <start_beat>3</start_beat>
-              <note_length>2</note_length>
-              <scale_degree>2</scale_degree>
+              <note_length>1</note_length>
+              <scale_degree>4</scale_degree>
               <octave>0</octave>
               <isRest>0</isRest>
             </note>
             <note>
-              <start_beat_abs>4</start_beat_abs>
-              <start_measure>2</start_measure>
-              <start_beat>1</start_beat>
+              <start_beat_abs>3</start_beat_abs>
+              <start_measure>1</start_measure>
+              <start_beat>4</start_beat>
               <note_length>2</note_length>
+              <scale_degree>3</scale_degree>
+              <octave>0</octave>
+              <isRest>0</isRest>
+            </note>
+            <note>
+              <start_beat_abs>5</start_beat_abs>
+              <start_measure>2</start_measure>
+              <start_beat>2</start_beat>
+              <note_length>0.5</note_length>
               <scale_degree>1</scale_degree>
+              <octave>0</octave>
+              <isRest>0</isRest>
+            </note>
+            <note>
+              <start_beat_abs>5.5</start_beat_abs>
+              <start_measure>2</start_measure>
+              <start_beat>2.5</start_beat>
+              <note_length>0.5</note_length>
+              <scale_degree>2</scale_degree>
               <octave>0</octave>
               <isRest>0</isRest>
             </note>
@@ -81,44 +108,134 @@
               <start_beat_abs>6</start_beat_abs>
               <start_measure>2</start_measure>
               <start_beat>3</start_beat>
-              <note_length>2</note_length>
-              <scale_degree>7</scale_degree>
-              <octave>-1</octave>
+              <note_length>1.5</note_length>
+              <scale_degree>1</scale_degree>
+              <octave>0</octave>
               <isRest>0</isRest>
+            </note>
+            <note>
+              <start_beat_abs>7.5</start_beat_abs>
+              <start_measure>2</start_measure>
+              <start_beat>4.5</start_beat>
+              <note_length>0.5</note_length>
+              <scale_degree>rest</scale_degree>
+              <octave>0</octave>
+              <isRest>1</isRest>
             </note>
             <note>
               <start_beat_abs>8</start_beat_abs>
               <start_measure>3</start_measure>
               <start_beat>1</start_beat>
-              <note_length>2</note_length>
-              <scale_degree>3</scale_degree>
+              <note_length>0.75</note_length>
+              <scale_degree>1</scale_degree>
               <octave>0</octave>
+              <isRest>0</isRest>
+            </note>
+            <note>
+              <start_beat_abs>8.75</start_beat_abs>
+              <start_measure>3</start_measure>
+              <start_beat>1.75</start_beat>
+              <note_length>0.5</note_length>
+              <scale_degree>5</scale_degree>
+              <octave>-1</octave>
+              <isRest>0</isRest>
+            </note>
+            <note>
+              <start_beat_abs>9.25</start_beat_abs>
+              <start_measure>3</start_measure>
+              <start_beat>2.25</start_beat>
+              <note_length>0.75</note_length>
+              <scale_degree>6</scale_degree>
+              <octave>-1</octave>
               <isRest>0</isRest>
             </note>
             <note>
               <start_beat_abs>10</start_beat_abs>
               <start_measure>3</start_measure>
               <start_beat>3</start_beat>
-              <note_length>2</note_length>
-              <scale_degree>4</scale_degree>
+              <note_length>0.5</note_length>
+              <scale_degree>7</scale_degree>
+              <octave>-1</octave>
+              <isRest>0</isRest>
+            </note>
+            <note>
+              <start_beat_abs>10.5</start_beat_abs>
+              <start_measure>3</start_measure>
+              <start_beat>3.5</start_beat>
+              <note_length>1</note_length>
+              <scale_degree>1</scale_degree>
               <octave>0</octave>
+              <isRest>0</isRest>
+            </note>
+            <note>
+              <start_beat_abs>11.5</start_beat_abs>
+              <start_measure>3</start_measure>
+              <start_beat>4.5</start_beat>
+              <note_length>0.25</note_length>
+              <scale_degree>6</scale_degree>
+              <octave>-1</octave>
+              <isRest>0</isRest>
+            </note>
+            <note>
+              <start_beat_abs>11.75</start_beat_abs>
+              <start_measure>3</start_measure>
+              <start_beat>4.75</start_beat>
+              <note_length>0.25</note_length>
+              <scale_degree>6</scale_degree>
+              <octave>-1</octave>
               <isRest>0</isRest>
             </note>
             <note>
               <start_beat_abs>12</start_beat_abs>
               <start_measure>4</start_measure>
               <start_beat>1</start_beat>
-              <note_length>2</note_length>
+              <note_length>0.5</note_length>
               <scale_degree>5</scale_degree>
-              <octave>0</octave>
+              <octave>-1</octave>
+              <isRest>0</isRest>
+            </note>
+            <note>
+              <start_beat_abs>12.5</start_beat_abs>
+              <start_measure>4</start_measure>
+              <start_beat>1.5</start_beat>
+              <note_length>0.5</note_length>
+              <scale_degree>6</scale_degree>
+              <octave>-1</octave>
+              <isRest>0</isRest>
+            </note>
+            <note>
+              <start_beat_abs>13</start_beat_abs>
+              <start_measure>4</start_measure>
+              <start_beat>2</start_beat>
+              <note_length>1</note_length>
+              <scale_degree>5</scale_degree>
+              <octave>-1</octave>
               <isRest>0</isRest>
             </note>
             <note>
               <start_beat_abs>14</start_beat_abs>
               <start_measure>4</start_measure>
               <start_beat>3</start_beat>
-              <note_length>2</note_length>
-              <scale_degree>6</scale_degree>
+              <note_length>0.5</note_length>
+              <scale_degree>3</scale_degree>
+              <octave>0</octave>
+              <isRest>0</isRest>
+            </note>
+            <note>
+              <start_beat_abs>14.5</start_beat_abs>
+              <start_measure>4</start_measure>
+              <start_beat>3.5</start_beat>
+              <note_length>0.5</note_length>
+              <scale_degree>2</scale_degree>
+              <octave>0</octave>
+              <isRest>0</isRest>
+            </note>
+            <note>
+              <start_beat_abs>15</start_beat_abs>
+              <start_measure>4</start_measure>
+              <start_beat>4</start_beat>
+              <note_length>1</note_length>
+              <scale_degree>1</scale_degree>
               <octave>0</octave>
               <isRest>0</isRest>
             </note>
@@ -126,8 +243,26 @@
               <start_beat_abs>16</start_beat_abs>
               <start_measure>5</start_measure>
               <start_beat>1</start_beat>
-              <note_length>2</note_length>
+              <note_length>0.5</note_length>
+              <scale_degree>6</scale_degree>
+              <octave>0</octave>
+              <isRest>0</isRest>
+            </note>
+            <note>
+              <start_beat_abs>16.5</start_beat_abs>
+              <start_measure>5</start_measure>
+              <start_beat>1.5</start_beat>
+              <note_length>1</note_length>
               <scale_degree>5</scale_degree>
+              <octave>0</octave>
+              <isRest>0</isRest>
+            </note>
+            <note>
+              <start_beat_abs>17.5</start_beat_abs>
+              <start_measure>5</start_measure>
+              <start_beat>2.5</start_beat>
+              <note_length>0.5</note_length>
+              <scale_degree>3</scale_degree>
               <octave>0</octave>
               <isRest>0</isRest>
             </note>
@@ -135,8 +270,35 @@
               <start_beat_abs>18</start_beat_abs>
               <start_measure>5</start_measure>
               <start_beat>3</start_beat>
-              <note_length>2</note_length>
-              <scale_degree>4</scale_degree>
+              <note_length>0.5</note_length>
+              <scale_degree>3</scale_degree>
+              <octave>0</octave>
+              <isRest>0</isRest>
+            </note>
+            <note>
+              <start_beat_abs>18.5</start_beat_abs>
+              <start_measure>5</start_measure>
+              <start_beat>3.5</start_beat>
+              <note_length>0.5</note_length>
+              <scale_degree>2</scale_degree>
+              <octave>0</octave>
+              <isRest>0</isRest>
+            </note>
+            <note>
+              <start_beat_abs>19</start_beat_abs>
+              <start_measure>5</start_measure>
+              <start_beat>4</start_beat>
+              <note_length>0.5</note_length>
+              <scale_degree>7</scale_degree>
+              <octave>-1</octave>
+              <isRest>0</isRest>
+            </note>
+            <note>
+              <start_beat_abs>19.5</start_beat_abs>
+              <start_measure>5</start_measure>
+              <start_beat>4.5</start_beat>
+              <note_length>0.5</note_length>
+              <scale_degree>1</scale_degree>
               <octave>0</octave>
               <isRest>0</isRest>
             </note>
@@ -144,35 +306,107 @@
               <start_beat_abs>20</start_beat_abs>
               <start_measure>6</start_measure>
               <start_beat>1</start_beat>
-              <note_length>2</note_length>
-              <scale_degree>3</scale_degree>
+              <note_length>0.5</note_length>
+              <scale_degree>rest</scale_degree>
               <octave>0</octave>
+              <isRest>1</isRest>
+            </note>
+            <note>
+              <start_beat_abs>20.5</start_beat_abs>
+              <start_measure>6</start_measure>
+              <start_beat>1.5</start_beat>
+              <note_length>1</note_length>
+              <scale_degree>1</scale_degree>
+              <octave>0</octave>
+              <isRest>0</isRest>
+            </note>
+            <note>
+              <start_beat_abs>21.5</start_beat_abs>
+              <start_measure>6</start_measure>
+              <start_beat>2.5</start_beat>
+              <note_length>0.5</note_length>
+              <scale_degree>7</scale_degree>
+              <octave>-1</octave>
               <isRest>0</isRest>
             </note>
             <note>
               <start_beat_abs>22</start_beat_abs>
               <start_measure>6</start_measure>
               <start_beat>3</start_beat>
-              <note_length>2</note_length>
-              <scale_degree>2</scale_degree>
-              <octave>0</octave>
+              <note_length>0.5</note_length>
+              <scale_degree>6</scale_degree>
+              <octave>-1</octave>
+              <isRest>0</isRest>
+            </note>
+            <note>
+              <start_beat_abs>22.5</start_beat_abs>
+              <start_measure>6</start_measure>
+              <start_beat>3.5</start_beat>
+              <note_length>0.5</note_length>
+              <scale_degree>5</scale_degree>
+              <octave>-1</octave>
+              <isRest>0</isRest>
+            </note>
+            <note>
+              <start_beat_abs>23</start_beat_abs>
+              <start_measure>6</start_measure>
+              <start_beat>4</start_beat>
+              <note_length>0.5</note_length>
+              <scale_degree>5</scale_degree>
+              <octave>-1</octave>
+              <isRest>0</isRest>
+            </note>
+            <note>
+              <start_beat_abs>23.5</start_beat_abs>
+              <start_measure>6</start_measure>
+              <start_beat>4.5</start_beat>
+              <note_length>0.5</note_length>
+              <scale_degree>6</scale_degree>
+              <octave>-1</octave>
               <isRest>0</isRest>
             </note>
             <note>
               <start_beat_abs>24</start_beat_abs>
               <start_measure>7</start_measure>
               <start_beat>1</start_beat>
-              <note_length>2</note_length>
+              <note_length>1</note_length>
+              <scale_degree>5</scale_degree>
+              <octave>-1</octave>
+              <isRest>0</isRest>
+            </note>
+            <note>
+              <start_beat_abs>25</start_beat_abs>
+              <start_measure>7</start_measure>
+              <start_beat>2</start_beat>
+              <note_length>0.5</note_length>
+              <scale_degree>rest</scale_degree>
+              <octave>0</octave>
+              <isRest>1</isRest>
+            </note>
+            <note>
+              <start_beat_abs>25.5</start_beat_abs>
+              <start_measure>7</start_measure>
+              <start_beat>2.5</start_beat>
+              <note_length>1</note_length>
+              <scale_degree>2</scale_degree>
+              <octave>0</octave>
+              <isRest>0</isRest>
+            </note>
+            <note>
+              <start_beat_abs>26.5</start_beat_abs>
+              <start_measure>7</start_measure>
+              <start_beat>3.5</start_beat>
+              <note_length>1</note_length>
               <scale_degree>3</scale_degree>
               <octave>0</octave>
               <isRest>0</isRest>
             </note>
             <note>
-              <start_beat_abs>26</start_beat_abs>
+              <start_beat_abs>27.5</start_beat_abs>
               <start_measure>7</start_measure>
-              <start_beat>3</start_beat>
-              <note_length>2</note_length>
-              <scale_degree>6</scale_degree>
+              <start_beat>4.5</start_beat>
+              <note_length>0.5</note_length>
+              <scale_degree>3</scale_degree>
               <octave>0</octave>
               <isRest>0</isRest>
             </note>
@@ -180,17 +414,44 @@
               <start_beat_abs>28</start_beat_abs>
               <start_measure>8</start_measure>
               <start_beat>1</start_beat>
-              <note_length>2</note_length>
+              <note_length>1</note_length>
               <scale_degree>5</scale_degree>
               <octave>0</octave>
               <isRest>0</isRest>
             </note>
             <note>
-              <start_beat_abs>30</start_beat_abs>
+              <start_beat_abs>29</start_beat_abs>
               <start_measure>8</start_measure>
-              <start_beat>3</start_beat>
-              <note_length>2</note_length>
-              <scale_degree>4</scale_degree>
+              <start_beat>2</start_beat>
+              <note_length>0.5</note_length>
+              <scale_degree>3</scale_degree>
+              <octave>0</octave>
+              <isRest>0</isRest>
+            </note>
+            <note>
+              <start_beat_abs>29.5</start_beat_abs>
+              <start_measure>8</start_measure>
+              <start_beat>2.5</start_beat>
+              <note_length>1</note_length>
+              <scale_degree>3</scale_degree>
+              <octave>0</octave>
+              <isRest>0</isRest>
+            </note>
+            <note>
+              <start_beat_abs>30.5</start_beat_abs>
+              <start_measure>8</start_measure>
+              <start_beat>3.5</start_beat>
+              <note_length>1</note_length>
+              <scale_degree>2</scale_degree>
+              <octave>0</octave>
+              <isRest>0</isRest>
+            </note>
+            <note>
+              <start_beat_abs>31.5</start_beat_abs>
+              <start_measure>8</start_measure>
+              <start_beat>4.5</start_beat>
+              <note_length>0.5</note_length>
+              <scale_degree>1</scale_degree>
               <octave>0</octave>
               <isRest>0</isRest>
             </note>

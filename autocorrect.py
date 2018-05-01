@@ -56,8 +56,7 @@ def pick_closest(tones, note_degree):
     #print(note.start_beat_abs)
 def autocorrect(chord,note,prob):
     #print(str(chord.tones) +", "+str(note.scale_degree))
-
-    if int(note.scale_degree) not in chord.tones and prob >= random.uniform(0, 1):
+    if note.scale_degree != "rest" and int(note.scale_degree) not in chord.tones and prob >= random.uniform(0, 1):
         #print(str(chord.tones) +", "+str(note.scale_degree))
         #print("AUTOCORRECTED")
         return "["+note.scale_degree+"->"+str(pick_closest(chord.tones,int(note.scale_degree)))+"]"
@@ -69,10 +68,10 @@ current_note_num = 0
 current_note = melody[current_note_num]
 for chord in harmony:
     #print(chord.tones)
-    chord_end = int(chord.start_beat_abs)+int(chord.chord_duration)
+    chord_end = float(chord.start_beat_abs)+float(chord.chord_duration)
     #print("CHORD END: "+str(chord_end))
 
-    while(int(current_note.start_beat_abs) < chord_end and current_note_num+1 < len(melody)):
+    while(float(current_note.start_beat_abs) < chord_end and current_note_num+1 < len(melody)):
         #print("CURRENT NOTE: "+str(current_note_num))
         #print("NOTE START: "+str(current_note.start_beat_abs))
 
