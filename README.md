@@ -16,6 +16,8 @@ It will ask you for the probability of an "off" note autocorrecting to the harmo
 The output of the test file is a string of scale degrees. 
 Changed notes are demarkated by [x->y] - meaning that "off" scale degree x has been changed to the "correct" scale degree y.
 
+(n) will notate that note n is either chromatic or is over a non-diatonic chord, so precautions should be taken.
+
 ## Example
 If your melody was originally:
 ```
