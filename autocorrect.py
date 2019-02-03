@@ -3,8 +3,8 @@ import random
 import os
 
 script_dir = os.path.dirname(__file__)
-harmony_hkt = hkt_generator.HKTObject(os.path.join(script_dir,"harmony.hkt"))
-melody_hkt = hkt_generator.HKTObject(os.path.join(script_dir,"melody.hkt"))
+harmony_hkt = hkt_generator.HKTObject(os.path.join(script_dir,"harmony.json"))
+melody_hkt = hkt_generator.HKTObject(os.path.join(script_dir,"melody.json"))
 prob = float(input("Autocorrect Probability [0-1]: "))
 
 
@@ -26,6 +26,7 @@ for chord in harmony:
     #print(str(chord.scale_degree)+", "+str(third)+", "+str(fifth))
 
     chord.tones = [int(chord.scale_degree),third,fifth]
+    #print(chord.tones)
 
 #for chord in harmony:
     #print(str(chord.tones)+", "+str(int(chord.start_beat_abs)+int(chord.chord_duration)))
@@ -55,12 +56,17 @@ def pick_closest(tones, note_degree):
 #for note in melody:
     #print(note.start_beat_abs)
 def autocorrect(chord,note,prob):
+    #print(chord)
     #print(chord.borrowed)
     #print(str(chord.tones) +", "+str(note.scale_degree))
-    if "s" in note.scale_degree or "f" in note.scale_degree or chord.borrowed != None:
+    if "s" in note.scale_degree or "f" in note.scale_degree or chord.borrowed != "":
+        #print("NO")
+        #print(note.scale_degree)
+        #print(chord.borrowed)
         return "("+str(note.scale_degree)+")"
     elif note.scale_degree != "rest" and int(note.scale_degree) not in chord.tones and prob >= random.uniform(0, 1):
         #print(str(chord.tones) +", "+str(note.scale_degree))
+        
         #print("AUTOCORRECTED")
         return "["+note.scale_degree+"->"+str(pick_closest(chord.tones,int(note.scale_degree)))+"]"
         #return 999
@@ -70,8 +76,10 @@ def autocorrect(chord,note,prob):
 current_note_num = 0
 current_note = melody[current_note_num]
 for chord in harmony:
+    #print(chord)
     #print(chord.tones)
     chord_end = float(chord.start_beat_abs)+float(chord.chord_duration)
+    #print(chord_end)
     #print("CHORD END: "+str(chord_end))
 
     while(float(current_note.start_beat_abs) < chord_end and current_note_num+1 < len(melody)):
@@ -80,6 +88,7 @@ for chord in harmony:
 
         #print(current_note.scale_degree)
         current_note.scale_degree = autocorrect(chord,current_note,prob)
+        #print(chord)
         current_note_num+=1
         current_note = melody[current_note_num]
 

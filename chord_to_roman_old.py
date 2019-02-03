@@ -58,10 +58,6 @@ loc_int =[0,-1,-1,0,-1,-1,-1]
 modes_flat_order = [locrian,phrygian,minor,dorian,mixolydian,major,lydian]
 modes_scale_order = [major,dorian,phrygian,lydian,mixolydian,minor,locrian]
 
-mode_scale_dict = {"major": 1, "dorian": 2, "phrygian": 3, "lydian": 4, "mixolydian": 5, "minor": 6, "locrian": 7}
-mode_flat_dict = {"locrian": 0, "phrygian": 1, "minor": 2, "dorian": 3, "mixolydian": 4, "major": 5, "lydian": 6}
-mode_flat_map = {"lydian": 1, "major": 0, "mixolydian": -1, "dorian": -2, "minor": -3, "phyrigan": -4, "locrian": -5}
-
 mode_int_flat_order = [loc_int,phryg_int,minor_int,
                         dorian_int,mixo_int,major_int,lyd_int]
 mode_int_scale_order = [major_int,dorian_int,phryg_int,
@@ -115,11 +111,9 @@ def handleBorrowedChord(chord,current_mode,current_mode_num):
 
     #We add +5 to chord.borrowed since it is in the range [-5,1]
     #We need [0,6] for our array
-
-    borrowed_conversion = mode_flat_map[chord.borrowed] 
     #print(chord.borrowed)
-    if(int(borrowed_conversion)+5 < len(mode_int_flat_order)):
-        borrowFrom = mode_int_flat_order[int(borrowed_conversion)+5]
+    if(int(chord.borrowed)+5 < len(mode_int_flat_order)):
+        borrowFrom = mode_int_flat_order[int(chord.borrowed)+5]
         borrowTo = mode_int_scale_order[current_mode_num]
         sd = int(chord.scale_degree)-1
         difference = borrowFrom[sd]-borrowTo[sd]
@@ -133,12 +127,12 @@ def handleBorrowedChord(chord,current_mode,current_mode_num):
             accidental = "b"
 
     #Our base roman numeral is the chord from the mode we borrow from
-        roman = modes_flat_order[int(borrowed_conversion)+5][sd]
+        roman = modes_flat_order[int(chord.borrowed)+5][sd]
 
     #A quick and dirty index map from the scale order to the flat order array
     #Used to alculate the correct quality of the chord extension
         swap = [6,2,5,1,4,0,3]
-        borrowNum = swap[int(borrowed_conversion)+5]
+        borrowNum = swap[int(chord.borrowed)+5]
         index = (borrowNum+sd)%7
 
         ext = getExtensionSymbol(chord,index)
@@ -147,8 +141,6 @@ def handleBorrowedChord(chord,current_mode,current_mode_num):
         chord.extension_disc = ext
         chord.roman_basic = accidental+roman
         chord.accidental = accidental
-
-        print(ext)
 
         return accidental+roman+ext+emb
     else:
@@ -172,9 +164,10 @@ def getEmbellishment(chord):
         if there is not.
     """
 
-   # print(chord.adds)
-    if chord.adds != []:
-        return "add"+"".join(map(str,chord.adds))
+    if chord.sus == None and chord.emb != None:
+        return chord.emb
+    elif chord.sus != None and chord.emb == None:
+        return chord.sus
     else:
         return ""
 
@@ -242,7 +235,6 @@ def getExtensionSymbol(chord,index):
     Returns:
         The secondary HKT chord in roman numeral notation.
     """
-    print(chord.fb)
 
     if chord.fb == "7":
         return seventh_qualities[index]
@@ -254,8 +246,6 @@ def getExtensionSymbol(chord,index):
         return ""
     else:
         return chord.fb
-
-
 
 def parseChord(chord, modeNum):
     """
@@ -277,20 +267,15 @@ def parseChord(chord, modeNum):
     #Offset by 1 to start at 0
     sd = int(chord.scale_degree)-1
 
-    #print(modeNum)
-    modeNum = mode_scale_dict[modeNum]
     current_mode_num = int(modeNum)-1
     current_mode = modes_scale_order[current_mode_num]
 
     if chord.borrowed != None:
         return handleBorrowedChord(chord,current_mode,current_mode_num)
-    elif chord.sec != 0:
+    elif chord.sec != None:
         return handleSecondaryChord(chord,current_mode,current_mode_num)
     else:
         index = (sd+current_mode_num)%7
-        #print(current_mode_num)
-        #chord.extension_disc = getExtensionSymbol(chord,index)
-        chord.extension_dict = ""
+        chord.extension_disc = getExtensionSymbol(chord,index)
         chord.roman_basic = current_mode[sd]
-        #print(chord.adds)
         return current_mode[sd]+chord.extension_disc+getEmbellishment(chord)
