@@ -59,7 +59,7 @@ def autocorrect(chord,note,prob):
     #print(chord)
     #print(chord.borrowed)
     #print(str(chord.tones) +", "+str(note.scale_degree))
-    if "s" in note.scale_degree or "f" in note.scale_degree or "#" in note.scale_degree or "b" in note.scale_degree (chord.borrowed != "" and chord.borrowed != None):
+    if "s" in note.scale_degree or "f" in note.scale_degree or "#" in note.scale_degree or "b" in note.scale_degree or (chord.borrowed != "" and chord.borrowed != None):
         #print("NO")
         #print(note.scale_degree)
         #print(chord.borrowed)
